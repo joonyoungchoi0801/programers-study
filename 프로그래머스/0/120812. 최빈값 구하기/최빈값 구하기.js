@@ -5,20 +5,15 @@ function solution(array) {
         arr[array[i]]++;
     }
     console.log(arr);
-    let max = 0;
-    let multi = false;
+    let max = Math.max.apply(null,arr);
+    let multi = 0;
     let maxans = 0;
     for(let i =0;i<arr.length;i++){
         if(max == arr[i]){
-            multi=true;
-        }
-        if(max<arr[i]){
-            max =arr[i];
-            multi =false;
+            multi++;
             maxans=i;
         }
-        
     }
-    let answer = multi ? -1:maxans
+    let answer = (multi>=2) ? -1:maxans
     return answer;
 }
