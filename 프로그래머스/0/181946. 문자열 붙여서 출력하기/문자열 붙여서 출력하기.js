@@ -5,13 +5,12 @@ const rl = readline.createInterface({
 });
 
 let input = [];
-let output;
+
 rl.on('line', function (line) {
     input = line.split(' ');
 }).on('close', function () {
     str1 = input[0];
     str2 = input[1];
-    output= str1+str2;
-    console.log(output)
+    console.log(str1+str2)
 });
 
